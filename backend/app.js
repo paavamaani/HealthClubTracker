@@ -2,7 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-const aboutGym = require('./api/routes/aboutGym');
+const aboutGymRoute = require('./api/routes/aboutGym');
+const bookClassRoute = require('./api/routes/bookClass');
+
 
 const app = express();
 
@@ -23,7 +25,9 @@ app.use((request, response, next) => {
     next();
 });
 
-app.use('/aboutgym', aboutGym);
+app.use('/aboutgym', aboutGymRoute);
+app.use('/book-class', bookClassRoute);
+
 
 app.use((request, response, next) => {
     const error = new Error('Not found API');

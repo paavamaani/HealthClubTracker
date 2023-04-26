@@ -16,7 +16,7 @@ exports.aboutGymInformation = (request, response) => {
         response.status(200).json(documents);
     })
     .catch(error => {
-        console.log("Success fetching about gym in aboutGymInformation", error);
+        console.log("Error fetching about gym in aboutGymInformation", error);
         
         response.status(500).json(error);
     });

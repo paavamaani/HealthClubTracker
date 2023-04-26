@@ -17,13 +17,18 @@ const citySchema = new mongoose.Schema({
     required: true
   },
   intervals: {
-    Monday: [intervalSchema],
-    Tuesday: [intervalSchema],
-    Wednesday: [intervalSchema],
-    Thursday: [intervalSchema],
-    Friday: [intervalSchema],
-    Saturday: [intervalSchema],
-    Sunday: [intervalSchema]
+    date: {
+      type: String,
+      required: true
+    },
+    start: {
+      type: String,
+      required: true
+    },
+    end: {
+      type: String,
+      required: true
+    }
   }
 });
 
