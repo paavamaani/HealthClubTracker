@@ -4,7 +4,15 @@ const mongoose = require('mongoose');
 
 const aboutGymRoute = require('./api/routes/aboutGym');
 const bookClassRoute = require('./api/routes/bookClass');
-
+const bookedClassRoute = require('./api/routes/bookedClass');
+const logHours = require('./api/routes/logHours');
+const activities = require('./api/routes/activities');
+const enroll = require('./api/routes/enroll');
+const checkInOut = require('./api/routes/checkInOut');
+const freeTrial = require('./api/routes/freeTrial');
+const cancelFreeTrial = require('./api/routes/cancelFreeTrial');
+const login = require('./api/routes/login');
+const analytics = require('./api/routes/analytics');
 
 const app = express();
 
@@ -27,7 +35,15 @@ app.use((request, response, next) => {
 
 app.use('/aboutgym', aboutGymRoute);
 app.use('/book-class', bookClassRoute);
-
+app.use('/booked-class', bookedClassRoute);
+app.use('/log-hours', logHours);
+app.use('/activities', activities);
+app.use('/enroll', enroll);
+app.use('/check-in-out', checkInOut);
+app.use('/free-trial', freeTrial);
+app.use('/cancel-free-trial', cancelFreeTrial);
+app.use('/login', login);
+app.use('/analytics', analytics);
 
 app.use((request, response, next) => {
     const error = new Error('Not found API');

@@ -5,7 +5,7 @@ const Booking = require('../models/Booking');
  * @param {Object} request 
  * @param {Object} response
  * 
- * Fetch flight arrivals and departures based on city 
+ * Book Class 
  */
 exports.bookClass = (request, response) => {
     const bookingDetails = new Booking({
