@@ -50,7 +50,7 @@ exports.activities = (request, response) => {
     .then(documents => {
         console.log("Successfully fetched activities from DB in activities", documents);
 
-        response.status(200).json(documents);
+        response.status(200).json(documents[0]);
     })
     .catch(error => {
         console.log("Error fetching activities from DB in activities", error);

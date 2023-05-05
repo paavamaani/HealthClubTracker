@@ -8,6 +8,10 @@ const enroll = new mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  city: {
+    type: String,
+    required: true
   }
 });
 

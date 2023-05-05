@@ -10,7 +10,8 @@ const Enroll = require('../models/Enroll');
 exports.enroll = (request, response) => {    
     const newEnroll = new Enroll({
         email: request.body.email,
-        password: request.body.password
+        password: request.body.password,
+        city: request.body.city
     });
 
     newEnroll.save()

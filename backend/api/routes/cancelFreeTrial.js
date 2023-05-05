@@ -4,6 +4,12 @@ const cancelFreeTrialController = require('../controllers/cancelFreeTrialControl
 
 const router = express.Router();
 
+router.get('/', (request, response, next) => {
+    console.log("Route to cancelFreeTrial", request.body);
+    
+    cancelFreeTrialController.getEmailId(request, response);
+});
+
 router.post('/', (request, response, next) => {
     console.log("Route to cancelFreeTrial", request.body);
     

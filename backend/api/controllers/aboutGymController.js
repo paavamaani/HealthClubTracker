@@ -13,7 +13,7 @@ exports.aboutGymInformation = (request, response) => {
     .then(documents => {
         console.log("Success fetching about gym in aboutGymInformation", documents);
         
-        response.status(200).json(documents);
+        response.status(200).json(documents[0]);
     })
     .catch(error => {
         console.log("Error fetching about gym in aboutGymInformation", error);
